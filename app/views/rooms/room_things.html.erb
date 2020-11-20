@@ -1,0 +1,7 @@
+<h1>room things go here </h1>
+<% @room.get_things.each do |thing|%>
+ <p>
+   <%= thing.name%>
+   <%= link_to 'like', like_thing_path(@room, @user, thing)%>
+ </p>
+<% end %>
